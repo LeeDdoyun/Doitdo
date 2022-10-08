@@ -493,32 +493,20 @@ header {
   width: 100%;
   height: 250px;
   overflow: hidden;
+  position: relative;
 }
 .history-photo {
-  background-image: url(./images/web-bnoplay.png);
   width: 100%;
-  height: 250px;
-  background-size: 100% auto;
+  position: absolute;
   transform: translateY(0%);
   transition: transform 5s linear;
   will-change: transform;
 }
 .history-photo:hover {
-  transform: translateY(-50%);
+  transform: translateY(calc((100% - 250px) * -1));
 }
+
 /* 변경 부분 끝 */
-.portfolio:nth-child(2) .history-photo {
-  background-image: url(./images/web-bnoplay.png);
-}
-.portfolio:nth-child(3) .history-photo {
-  background-image: url(./images/web-kitcycle.png);
-}
-.portfolio:nth-child(4) .history-photo {
-  background-image: url(./images/web-investplan.png);
-}
-.portfolio:nth-child(5) .history-photo {
-  background-image: url(./images/web-cakehouse.png);
-}
 
 .history-text h4 {
   text-align: center;
